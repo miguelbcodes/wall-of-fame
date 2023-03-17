@@ -5,7 +5,7 @@ import "./index.css";
 
 function App() {
   return (
-    <main className="container sm:mx-auto">
+    <main className="container font-poppins sm:mx-auto">
       <section className="flex flex-col items-center my-4">
         <h3 className="text-3xl font-bold text-gray-800 mb-1.5">Total activated Users</h3>
         <ActivatedUsersChart />
