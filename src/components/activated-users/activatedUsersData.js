@@ -13,5 +13,5 @@ export const data = {
     name: 'Total Activated Users',
     type: 'measure'
   }],
-  records: getRecords(hardStatsData, 'activated users')
+  records: getRecords(hardStatsData, 'year, month', 'activated users')
 }

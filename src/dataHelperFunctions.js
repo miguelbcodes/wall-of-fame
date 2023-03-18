@@ -1,11 +1,16 @@
-export function getRecords(data, measure) {
+export function getRecords(data, dimensionString, measureString) {
+  let dimensions = dimensionString.split(', ');
+  let measures = measureString.split(', ');
   let records = [];
   let values;
-  for (let i = 0; i < data.length; i++) {
+  for (let row = 0; row < data.length; row++) {
     values = [];
-    values.push(data[i]["year"]);
-    values.push(data[i]["month"]);
-    values.push(data[i][`${measure}`]);
+    dimensions.forEach(dimension => {
+      values.push(data[row][dimension]);
+    });
+    measures.forEach(measure => {
+      values.push(data[row][measure]);
+    });
     records.push(values);
   }
   return records;

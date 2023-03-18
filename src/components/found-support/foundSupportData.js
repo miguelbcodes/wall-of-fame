@@ -13,5 +13,5 @@ export const data = {
     name: 'Found Support In Community',
     type: 'measure'
   }],
-  records: getRecords(hardStatsData, 'stackies who found support in the community')
+  records: getRecords(hardStatsData, 'year, month', 'stackies who found support in the community')
 }

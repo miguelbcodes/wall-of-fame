@@ -13,5 +13,5 @@ export const data = {
     name: 'Total Message Volume',
     type: 'measure'
   }],
-  records: getRecords(hardStatsData, 'message volume')
+  records: getRecords(hardStatsData, 'year, month', 'message volume')
 }
