@@ -15,3 +15,23 @@ export function getRecords(data, dimensionString, measureString) {
   }
   return records;
 }
+
+export function getSeries(dimensionString, measureString) {
+  let dimensions = dimensionString.split(', ');
+  let measures = measureString.split(', ');
+  let series = [];
+  let values;
+  dimensions.forEach(dimension => {
+    values = {};
+    values.name = dimension;
+    values.type = 'dimension';
+    series.push(values);
+  })
+  measures.forEach(measure => {
+    values = {};
+    values.name = measure;
+    values.type = 'measure';
+    series.push(values);
+  })
+  return series;
+}
