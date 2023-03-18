@@ -1,12 +1,12 @@
-export function getMonths(object) {
-  let property;
-  let propertiesArray = [];
-  for (property in object) {
-    propertiesArray.push(property);
+export function getRecords(data, measure) {
+  let records = [];
+  let values;
+  for (let i = 0; i < data.length; i++) {
+    values = [];
+    values.push(data[i]["year"]);
+    values.push(data[i]["month"]);
+    values.push(data[i][`${measure}`]);
+    records.push(values);
   }
-  return propertiesArray;
-}
-
-export function getValues(object) {
-  return Object.values(object);
+  return records;
 }

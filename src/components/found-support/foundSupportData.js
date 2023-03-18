@@ -1,15 +1,17 @@
-import { rawData } from '../../data/rawData.js'
-import { getMonths, getValues } from "../../dataHelperFunctions"
+import { getRecords } from "../../dataHelperFunctions"
+
+const hardStatsData = require('../../data/hardStats.json');
 
 export const data = {
   series: [{
+    name: 'Year',
+    type: 'dimension'
+  }, {
     name: 'Months',
-    type: 'dimension',
-    values: getMonths(rawData["Found Support In Community"])
+    type: 'dimension'
   }, {
     name: 'Found Support In Community',
-    type: 'measure',
-    values: getValues(rawData["Found Support In Community"])
-  }
-  ],
+    type: 'measure'
+  }],
+  records: getRecords(hardStatsData, 'stackies who found support in the community')
 }
