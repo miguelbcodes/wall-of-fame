@@ -35,3 +35,30 @@ export function getSeries(dimensionString, measureString) {
   })
   return series;
 }
+
+export function getSource(data, dimensionsArray) {
+  let source = [];
+  for (let dataObject = 0; dataObject < data.length; dataObject++) {
+    let obj = {};
+    dimensionsArray.forEach(dimension => {
+      if (dimension == 'month') {
+        obj[dimension] = `${data[dataObject][dimension]} ${data[dataObject]['year']}`;
+      } else {
+        obj[dimension] = data[dataObject][dimension]
+      }
+    })
+    source.push(obj)
+  }
+  return source;
+}
+
+export function getSeriesData(data, name, value) {
+  let seriesData = [];
+  for (let dataObject = 0; dataObject < data.length; dataObject++) {
+      let obj = {};
+      obj.name = data[dataObject][name];
+      obj.value = data[dataObject][value];
+      seriesData.push(obj)
+  }
+  return seriesData;
+}

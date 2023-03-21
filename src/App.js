@@ -1,25 +1,15 @@
-import "./index.css";
-import ColumnChart from "./components/charts/ColumnChart";
+import BarChart from "./components/charts/BarChart";
+import DonutChart from './components/charts/DonutChart';
 
 function App() {
-  return (
-    <main className="container font-poppins sm:mx-auto">
-      <section className="flex flex-col items-center my-4">
-        <h3 className="text-3xl font-bold text-gray-800 mb-1.5">Total activated Users</h3>
-        <ColumnChart datafile={require('./data/hardStats.json')} dimensions={'month'} measures={'activated users'} />
-      </section>
-      <section className="flex flex-col items-center my-4">
-        <h3 className="text-3xl font-bold text-gray-800 mb-1.5">Total message volume</h3>
-        <p className="mb-3 text-gray-700 font-medium">Messages in our Discord channels: general chat, general help, quest help and forum, community collabs, safe space</p>
-        <ColumnChart datafile={require('./data/hardStats.json')} dimensions={'month'} measures={'message volume'}/>
-      </section>
-      <section className="flex flex-col items-center my-4">
-        <h3 className="text-3xl font-bold text-gray-800 mb-1.5">Found support in community</h3>
-        <p className="mb-3 text-gray-700 font-medium">Instances of Stackies who found support in the community</p>
-        <ColumnChart datafile={require('./data/hardStats.json')} dimensions={'month'} measures={'stackies who found support in the community'}/>
-      </section>
-    </main>
-  );
+  return ( 
+    <>
+      <BarChart dataset={require('./data/hardStats.json')} dimensions={['month', 'stackies who have managed to buy things thanks to stackup', 'stackies who have managed to gain opportunities because of stackup', 'stackies who found support in the community']} series={[{type:'bar'},{type:'bar'},{type:'bar'}]} />;
+      <DonutChart dataset={require('./data/partnerCampaign.json')} name={'partner'} value={'No. of Stackies engaged with each partner campaign'}/>
+      <BarChart dataset={require('./data/hardStats.json')} dimensions={['month', 'stackies who did well (top 10) in hackathons and quizzes outside of StackUp', 'stackies who successfully completed 3 partner campaigns and above', 'stackies who successfully completed 5 partner campaigns and above']} series={[{type:'line'},{type:'line',smooth: true},{type:'bar'}]} />;
+      <BarChart dataset={require('./data/events.json')} dimensions={['event', 'Percentage Signedup and Attended', 'Total Attendance over Expected Attendance','Industry Average']} series={[{type:'bar'},{type:'bar'},{type:'line'}]} />
+    </>
+  )
 }
 
 export default App;
