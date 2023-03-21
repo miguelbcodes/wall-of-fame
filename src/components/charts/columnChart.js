@@ -24,7 +24,11 @@ export default function ColumnChart({ datafile, dimensions, measures }) {
           },
         },
         style: {
+          paddingTop: '0em',
           plot: {
+            paddingTop: '0em',
+            paddingBottom: '1em',
+            paddingRight: '0em',
             marker: {
               colorPalette: '#ff6a6a' // stackup color
             },
