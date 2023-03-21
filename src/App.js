@@ -1,5 +1,5 @@
 import "./index.css";
-import ColumnChart from "./components/charts/columnChart";
+import ColumnChart from "./components/charts/ColumnChart";
 
 function App() {
   return (
