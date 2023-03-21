@@ -1,0 +1,32 @@
+[
+  {
+    "event": "Halloween (31 Oct 2022)",
+    "Percentage Signedup and Attended": "40.70%",
+    "Total Attendance over Expected Attendance": "63.95%",
+    "Industry Average": "30%"
+  },
+  {
+    "event": "Ankr (16 Dec 2022)",
+    "Percentage Signedup and Attended": "30.63%",
+    "Total Attendance over Expected Attendance": "60.36%",
+    "Industry Average": "30%"
+  },
+  {
+    "event": "NTU Blockchain (22 Dec 2022)",
+    "Percentage Signedup and Attended": "36.00%",
+    "Total Attendance over Expected Attendance": "55.00%",
+    "Industry Average": "30%"
+  },
+  {
+    "event": "Bern's Birthday Bash (12 Jan 2023)",
+    "Percentage Signedup and Attended": "30.63%",
+    "Total Attendance over Expected Attendance": "60.36%",
+    "Industry Average": "30%"
+  },
+  {
+    "event": "Building on Circle (23 Feb 2023)",
+    "Percentage Signedup and Attended": "35.00%",
+    "Total Attendance over Expected Attendance": "57.50%",
+    "Industry Average": "30%"
+  }
+]
