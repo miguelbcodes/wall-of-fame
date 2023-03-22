@@ -1,12 +1,35 @@
 import React from "react";
+import { useState } from "react";
 import Header from "./Header";
 import CommunityPage from "../pages/CommunityPage";
 
+const tabs = [
+    {
+        id: 1,
+        tabTitle: 'Community',
+        content: <CommunityPage />
+    },
+    {
+        id: 2,
+        tabTitle: 'Tab 2',
+        content: 'Contenido de tab 2.'
+    }
+];
+
 export default function PageLayout() {
+    const [currentTab, setCurrentTab] = useState('1');
+    function handleTabClick(currentTab) {
+        setCurrentTab(currentTab);
+    }
+
     return (
         <>
-            <Header />
-            <CommunityPage />
+            <Header tabs={tabs} currentTab={currentTab} onTabClick={handleTabClick}/>
+            {tabs.map((tab, i) =>
+                <div key={i}>
+                    {currentTab === `${tab.id}` && tab.content}
+                </div>
+            )}
         </>
     )
 }
