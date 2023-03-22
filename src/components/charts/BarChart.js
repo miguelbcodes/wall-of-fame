@@ -4,6 +4,11 @@ import { getSource } from "../../dataHelperFunctions";
 
 function BarChart({ dimensions, series, dataset }) {
     const option = {
+        grid: {
+          left: '5%',
+          top: 20,
+          bottom: 20
+        },
         dataset: {
             dimensions: dimensions,
             source: getSource(dataset, dimensions)
@@ -27,6 +32,6 @@ function BarChart({ dimensions, series, dataset }) {
           },
       };
 
-    return <ReactEcharts option={option} />;
+      return <ReactEcharts option={option} style={{ width: '100%', height: '100%' }} className="flex-shrink overflow-hidden" />;
 }
 export default BarChart;

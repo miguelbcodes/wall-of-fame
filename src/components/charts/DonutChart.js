@@ -4,6 +4,11 @@ import { getSeriesData } from "../../dataHelperFunctions";
 
 function DonutChart({ dataset, name, value }) {
     const option = {
+        grid: {
+          left: '5%',
+          top: 20,
+          bottom: 20
+        },
         series: [
           {
             type: 'pie',
@@ -16,6 +21,6 @@ function DonutChart({ dataset, name, value }) {
           },
       };
 
-    return <ReactEcharts option={option} />;
+      return <ReactEcharts option={option} style={{ width: '100%', height: '100%' }} className="flex-shrink overflow-hidden" />;
 }
 export default DonutChart;
