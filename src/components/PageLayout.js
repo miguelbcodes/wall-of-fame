@@ -11,8 +11,8 @@ const tabs = [
     },
     {
         id: 2,
-        tabTitle: 'Tab 2',
-        content: 'Contenido de tab 2.'
+        tabTitle: 'In Progress',
+        content: '🚧 Work In Progress 🚧'
     }
 ];
 
