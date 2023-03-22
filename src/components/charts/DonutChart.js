@@ -2,7 +2,7 @@ import React from "react";
 import ReactEcharts from "echarts-for-react";
 import { getSeriesData } from "../../dataHelperFunctions";
 
-function BarChart({ dataset, name, value }) {
+function DonutChart({ dataset, name, value }) {
     const option = {
         series: [
           {
@@ -18,4 +18,4 @@ function BarChart({ dataset, name, value }) {
 
     return <ReactEcharts option={option} />;
 }
-export default BarChart;
+export default DonutChart;
