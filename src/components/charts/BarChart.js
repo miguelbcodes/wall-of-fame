@@ -29,6 +29,6 @@ function BarChart({ dimensions, series, dataset }) {
           },
       };
 
-      return <ReactEcharts option={option} style={{ width: '100%', height: '100%' }} className="flex-shrink overflow-hidden" />;
+      return <ReactEcharts option={option} style={{ width: '100%', height: '100%' }} className="flex-shrink" />;
 }
 export default BarChart;
