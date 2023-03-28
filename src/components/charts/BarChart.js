@@ -27,6 +27,7 @@ function BarChart({ dimensions, series, dataset }) {
          },
         yAxis: {},
         series: series,
+        confine: true,
         tooltip: {
             trigger: 'axis',
             axisPointer: {
