@@ -15,7 +15,10 @@ function BarChart({ dimensions, series, dataset }) {
             source: getSource(dataset, dimensions)
         },
         xAxis: { 
-            type: 'category'
+            type: 'category',
+            axisPointer: {
+              type: 'shadow'
+            }
          },
         yAxis: {},
         series: series,
