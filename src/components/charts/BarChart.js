@@ -4,6 +4,11 @@ import { getSource } from "../../dataHelperFunctions";
 
 function BarChart({ dimensions, series, dataset }) {
     const option = {
+        color: [
+          '#FF5D64',
+          '#A00071',
+          '#60006F',
+        ],
         grid: {
           left: '15%',
           right: '10%',
