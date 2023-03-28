@@ -40,14 +40,20 @@ export function getSource(data, dimensionsArray) {
   let source = [];
   for (let dataObject = 0; dataObject < data.length; dataObject++) {
     let obj = {};
+    let hasValue = false;
     dimensionsArray.forEach(dimension => {
       if (dimension == 'month') {
         obj[dimension] = `${data[dataObject][dimension]} ${data[dataObject]['year']}`;
       } else {
-        obj[dimension] = data[dataObject][dimension]
+        obj[dimension] = data[dataObject][dimension];
+        if (obj[dimension]) {
+          hasValue = true;
+        }
       }
     })
-    source.push(obj)
+    if (hasValue) {
+      source.push(obj);
+    }
   }
   return source;
 }
