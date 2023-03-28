@@ -1,6 +1,5 @@
 import React from "react";
 import { useState } from "react";
-import Header from "./Header";
 import CommunityPage from "../pages/CommunityPage";
 
 const tabs = [
@@ -26,8 +25,7 @@ export default function PageLayout() {
         <>
             <div className="h-screen font-poppins p-4 relative bg-slate-100">
                 <div className="h-full w-full p-0.5 bg-stackup polygon-cyberpunk-wrapper">
-                    <div className="h-full w-full polygon-cyberpunk-frame p-12 bg-[rgb(255,240,240)]">
-                        {false && <Header tabs={tabs} currentTab={currentTab} onTabClick={handleTabClick}/>}
+                    <div className="h-full w-full polygon-cyberpunk-frame px-12 py-6 bg-[rgb(255,240,240)]">
                         {(tabs.filter(tab => `${tab.id}` === currentTab))[0].content}
                     </div>
                 </div>  

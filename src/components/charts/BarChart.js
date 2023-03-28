@@ -5,7 +5,8 @@ import { getSource } from "../../dataHelperFunctions";
 function BarChart({ dimensions, series, dataset }) {
     const option = {
         grid: {
-          left: '5%',
+          left: '15%',
+          right: '10%',
           top: 20,
           bottom: 20
         },
