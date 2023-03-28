@@ -23,7 +23,7 @@ export default function PageLayout() {
 
     return (
         <>
-            <div className="h-screen font-poppins p-4 relative bg-slate-100">
+            <div className="h-screen font-poppins p-4 relative bg-slate-100 [background-image:url(./assets/crosshair.svg)]">
                 <div className="h-full w-full p-0.5 bg-stackup polygon-cyberpunk-wrapper">
                     <div className="h-full w-full polygon-cyberpunk-frame px-12 py-6 bg-[rgb(255,240,240)]">
                         {(tabs.filter(tab => `${tab.id}` === currentTab))[0].content}
