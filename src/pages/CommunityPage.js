@@ -26,7 +26,7 @@ export default function CommunityPage() {
                     <article className="flex flex-col items-center justify-end">
                         <h1 className="text-xl font-poppins font-semibold text-gray-600 flex flex-col text-center items-center gap-1">
                             Stackies
-                            <img src={require('../assets/world.png')} className="h-24 animate-spin-slow"/>
+                            <img src={require('../assets/world.png')} alt="Globe Icon" className="h-24 animate-spin-slow"/>
                             Wall Of Fame
                         </h1>
                     </article>
