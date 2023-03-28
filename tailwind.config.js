@@ -7,6 +7,9 @@ module.exports = {
         stackup: {
           DEFAULT: '#ff6a6a'
         }
+      },
+      animation: {
+        'spin-slow': 'spin 10s linear infinite',
       }
     },
   },
