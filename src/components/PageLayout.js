@@ -6,7 +6,7 @@ import PartnerPage from "../pages/PartnerPage";
 const tabs = [
     {
         id: 1,
-        tabTitle: 'Community',
+        tabTitle: 'Community Higlights',
         content: <CommunityPage />
     },
     {
