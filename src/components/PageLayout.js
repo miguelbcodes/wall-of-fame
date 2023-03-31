@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import CommunityPage from "../pages/CommunityPage";
+import PartnerPage from "../pages/PartnerPage";
 
 const tabs = [
     {
@@ -10,8 +11,8 @@ const tabs = [
     },
     {
         id: 2,
-        tabTitle: 'In Progress',
-        content: '🚧 Work In Progress 🚧'
+        tabTitle: 'Partners Board',
+        content: <PartnerPage />
     }
 ];
 
