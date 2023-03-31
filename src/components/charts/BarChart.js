@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import ReactEcharts from "echarts-for-react";
 import { getSource } from "../../dataHelperFunctions";
 
-function BarChart({ dimensions, series, dataset }) {
+function BarChart({ dimensions, series, spreadsheetTab }) {
+
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+      const fetchData = async () => {
+        const response = await fetch(`https://opensheet.elk.sh/1ipQgxTiBT8VBTHHoRVjRa01Oscmm1IrF3yaqJgQWAfI/${spreadsheetTab}`);
+        const result = await response.json();
+        setData(getSource(result, dimensions));
+      };
+      fetchData();
+    }, []);
+
     const option = {
         color: [
           '#FF5D64',
@@ -17,7 +29,7 @@ function BarChart({ dimensions, series, dataset }) {
         },
         dataset: {
             dimensions: dimensions,
-            source: getSource(dataset, dimensions)
+            source: data
         },
         xAxis: { 
             type: 'category',
