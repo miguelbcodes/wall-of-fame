@@ -76,9 +76,9 @@ export default function PartnerPage() {
                     <ul className="grid grid-cols-2 gap-3">
                         {partners.map((partner, id) => {
                             return id === currentPartner ? 
-                            <button key={id} className="px-12 flex gap-2 items-center pointer-events-none" onClick={() => handleClick(id)}><div className="h-3/5 rounded-full w-[2px] flex-shrink-0 bg-stackup"></div><img src={partner.logo} /></button>
+                            <button key={id} className="px-12 flex gap-2 items-center pointer-events-none" onClick={() => handleClick(id)}><div className="h-3/5 rounded-full w-[2px] flex-shrink-0 bg-stackup"></div><img alt={`${partner.name} logo`} src={partner.logo} /></button>
                             :
-                            <button key={id} className="px-12" onClick={() => handleClick(id)}><img src={partner.logo} className="hover:-hue-rotate-15"/></button>
+                            <button key={id} className="px-12" onClick={() => handleClick(id)}><img alt={`${partner.name} logo`} src={partner.logo} className="hover:-hue-rotate-15"/></button>
                         })}
                     </ul>
                 </article>
