@@ -31,6 +31,13 @@ const partners = [
         logo: require('../assets/partners-logos/avalanche.png')
     },
     {
+        name: 'Zepeto',
+        description: 'The ZEPETO app is a South Korean mobile chat app where users create and interact as 3D avatars in different worlds. Some of these worlds are chat-based while others are game-based, and users can decide on whether these worlds are public or for friends only. With similarities in interaction to platforms like Roblox and Minecraft, ZEPETO has taken steps into the metaverse.',
+        link: 'https://app.stackup.dev/quest_page/exploring-the-world-of-zepeto',
+        status: 'finished',
+        logo: require('../assets/partners-logos/zepeto.png')
+    },
+    {
         name: 'Circle',
         description: 'Circle is a global financial technology company with the goal of helping money move at internet speed through the power of USD Coin (USDC) and Euro Coin (EUROC). It is time for you to get acquainted with Circle and its technology.',
         link: 'https://app.stackup.dev/campaign_page/enabling-payments-with-circle',
@@ -43,7 +50,15 @@ const partners = [
         link: 'https://app.stackup.dev/campaign_page/decentralizing-storage-for-web3-with-filecoin',
         status: 'active',
         logo: require('../assets/partners-logos/filecoin.png')
+    },
+    {
+        name: 'Hedera',
+        description: 'Hedera is a decentralized, open-source, proof-of-stake public ledger that utilizes the leaderless, asynchronous Byzantine Fault Tolerance (aBFT) hashgraph consensus algorithm. It is governed by a collusion-resistant, decentralized council of leading enterprises, universities, and web3 projects from around the world.',
+        link: 'https://app.stackup.dev/campaign_page/',
+        status: 'Upcoming',
+        logo: require('../assets/partners-logos/hedera.png')
     }
+    
 ]
 
 export default function PartnerPage() {
@@ -83,7 +98,13 @@ export default function PartnerPage() {
                                 <span className="h-2 w-2 bg-green-500 rounded-full"></span>
                                 <p className="text-sm">Active</p>
                             </>
-                        }                        
+                        }     
+                        {partners[currentPartner].status === 'Upcoming' &&
+                            <>
+                                <span className="h-2 w-2 bg-blue-500 rounded-full"></span>
+                                <p className="text-sm">UpComing</p>
+                            </>
+                        }                    
                     </div>
                 </article>
             </section>
