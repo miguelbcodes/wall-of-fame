@@ -5,12 +5,10 @@ import PartnerPage from "../pages/PartnerPage";
 
 const tabs = [
     {
-        id: 1,
         tabTitle: 'Community Higlights',
         content: <CommunityPage />
     },
     {
-        id: 2,
         tabTitle: 'Partners Board',
         content: <PartnerPage />
     }
