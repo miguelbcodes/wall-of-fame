@@ -2,8 +2,13 @@ import React from "react";
 import { useState } from "react";
 import CommunityPage from "../pages/CommunityPage";
 import PartnerPage from "../pages/PartnerPage";
+import AwardsPage from "../pages/AwardsPage";
 
 const tabs = [
+    {
+        tabTitle: 'Stackies Awards',
+        content: <AwardsPage />
+    },
     {
         tabTitle: 'Community Higlights',
         content: <CommunityPage />
@@ -15,7 +20,7 @@ const tabs = [
 ];
 
 export default function PageLayout() {
-    const [currentTab, setCurrentTab] = useState(0);
+    const [currentTab, setCurrentTab] = useState(1);
     function handleTabClick(currentTab) {
         setCurrentTab(currentTab);
     }
