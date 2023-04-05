@@ -35,9 +35,6 @@ export default function AwardsPage() {
         return matrix;
     }
     
-
-    console.log(arrayToMatrix(currentMonth['powerstackies'].split(', '), 3));
-
     return (
         <ContentLayout>
             <section className="h-full flex flex-col gap-6 items-center justify-center text-gray-800">
