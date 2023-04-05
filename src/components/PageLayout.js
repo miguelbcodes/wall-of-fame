@@ -10,7 +10,7 @@ const tabs = [
         content: <AwardsPage />
     },
     {
-        tabTitle: 'Community Higlights',
+        tabTitle: 'Community Highlights',
         content: <CommunityPage />
     },
     {
