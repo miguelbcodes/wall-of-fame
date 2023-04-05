@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useCallback, useEffect } from "react";
 import CommunityPage from "../pages/CommunityPage";
 import PartnerPage from "../pages/PartnerPage";
 import AwardsPage from "../pages/AwardsPage";
@@ -24,6 +24,23 @@ export default function PageLayout() {
     function handleTabClick(currentTab) {
         setCurrentTab(currentTab);
     }
+
+    const handleKeyPress = useCallback((event) => {
+        if (event.key === "ArrowRight" && currentTab + 1 < tabs.length) {
+            setCurrentTab(currentTab => currentTab + 1);
+        }
+        if (event.key === "ArrowLeft" && currentTab -1 >= 0) {
+            setCurrentTab(currentTab => currentTab - 1);
+        }
+        return;
+    }, [currentTab]);
+    
+    useEffect(() => {
+        document.addEventListener('keydown', handleKeyPress);   
+        return () => {
+            document.removeEventListener('keydown', handleKeyPress);
+        };
+    }, [handleKeyPress]);
 
     return (
         <>
